@@ -35,7 +35,7 @@ body{
 .navbar{
     max-width: 1200px;
     margin:0 auto;
-    padding: 18px 24px;
+    padding: 16px 24px;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -58,7 +58,8 @@ body{
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 36px;
+    margin-left: auto;
 }
 
 /*nav link styling*/
@@ -649,4 +650,86 @@ body{
 .form-button {
     margin-top: 6px;
     cursor: pointer;
+}
+
+/*footerf*/
+.site-footer {
+    background-color: #030303;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/*main footer layout*/
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 0.8fr;
+    gap: 42px;
+}
+
+/*footer logo */
+.footer-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/*footer paragraph text*/
+.footer-brand p,
+.footer-info p {
+    color: #c7c7c7;
+    font-size: 0.95rem;
+    max-width: 430px;
+}
+
+/*footer section headings*/
+.footer-links h3,
+.footer-info h3 {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 18px;
+}
+
+/*footer nav list*/
+.footer-links ul {
+    list-style: none;
+}
+
+/*footer nav list items*/
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+/*footer links*/
+.footer-links a {
+    color: #c7c7c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* footer link hover*/
+.footer-links a:hover {
+    color: #c9a86a;
+}
+
+/*footer info spacing */
+.footer-info p {
+    margin-bottom: 10px;
+}
+
+/*bottom copyright strip */
+.footer-bottom {
+    padding: 18px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/*copyright text*/
+.footer-bottom p {
+    color: #8f8f8f;
+    font-size: 0.85rem;
 }
