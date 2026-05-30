@@ -10,18 +10,18 @@
     </head>
     <body>
         <header class="site-header">
-        <nav class ="navbar">
-            <a href ="#" class="logo-link">
-                <img src="assets/LSG.png" alt ="Lukes Security Group Logo" class="logo">
-            </a>
+            <nav class ="navbar">
+                <a href ="#" class="logo-link">
+                    <img src="assets/LSG.png" alt ="Lukes Security Group Logo" class="logo">
+                </a>
 
-            <ul class = "nav-links">
-                <li><a href="#services">Services</a></li> 
-                <li><a href ="#about">About Us</a></li>
-                <li><a href="#quote">Request a Quote</a></li>
-            </ul>
-        </nav>
-    </header>
+                <ul class = "nav-links">
+                    <li><a href="#services">Services</a></li> 
+                    <li><a href ="#about">About Us</a></li>
+                    <li><a href="#quote">Request a Quote</a></li>
+                </ul>
+            </nav>
+        </header>
     <main>
         <section class="hero">
             <div class="hero-overlay"></div>
@@ -42,7 +42,7 @@
             </div>
         </section>
 
-        <section class="experience-strip" aria-label="experience across high-profile events and venues">
+        <section class="experience-strip" aria-label="Experience across high-profile events and venues">
             <div class="experience-container">
                 <p class="experience-label">Experience Across High-Profile Events & Venues</p>
                 <div class="experience-marquee">
@@ -71,54 +71,55 @@
                 <div class="services-heading">
                     <h2>Our Services</h2>
                 </div>
-                <div class="service-grid">
-                    ...
-                </div>
-            </div>
-        </section>
 
-            <div class="services-grid">
-                <article class="service-card">
-                <h3>Armed Security</h3>
-            <p>
-                Professional armed security services for clients and environments that require a higher level of protection and readiness.
-            </p>
-            </article>
-                <article class="service-card">
-                    <h3>Unarmed Security</h3>
-                    <p>
-                        Reliable unarmed security for events, businesses, venues, and private gatherings
-                        where presence, communication, and control matter.
-                    </p>
-            </article>
-                <article class="service-card">
-                    <h3>Nightlife Security</h3>
-                    <p>
-                        Security support for nightclubs, lounges, and entertainment venues with a focus 
-                        on access control, guest safety, and crowd management.
-                    </p>
-            </article>
-            <article class="service-card">
-                <h3>VIP & Table Service Security</h3>
-                <p>
-                    Discreet protection for VIP areas, table service sections, private guests,
-                    artists, and high-profile event environments.
-                </p>
-            </article>
-            <article class="service-card">
-                <h3>Private Event Security</h3>
-                <p>
-                    Professional Security for private gatherings, corporate events, residential events,
-                    and special occasions.
-                </p>
-            </article>
-            <article class="service-card">
-                <h3>Access Control</h3>
-                <p>
-                   Organized entry management, guest verification, restricted area protection,
-                    and professional front-facing security presence.
-                </p>
-            </article>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Armed Security</h3>
+                        <p>
+                            Professional armed security services for clients and environments that require a higher level of protection and readiness.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Unarmed Security</h3>
+                        <p>
+                            Reliable unarmed security for events, businesses, venues, and private gatherings
+                            where presence, communication, and control matter.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Nightlife Security</h3>
+                        <p>
+                            Security support for nightclubs, lounges, and entertainment venues with a focus 
+                            on access control, guest safety, and crowd management.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>VIP & Table Service Security</h3>
+                        <p>
+                            Discreet protection for VIP areas, table service sections, private guests,
+                            artists, and high-profile event environments.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Private Event Security</h3>
+                        <p>
+                            Professional security for private gatherings, corporate events, residential events,
+                            and special occasions.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <h3>Access Control</h3>
+                        <p>
+                            Organized entry management, guest verification, restricted area protection,
+                            and professional front-facing security presence.
+                        </p>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -231,7 +232,7 @@
 
                         <div class="form-group">
                             <label for="guest-count">Estimated Guest Count</label>
-                            <input type="number" id="guest-count" name="guest-count" placeholder="Example: 150">
+                            <input type="number" id="guest-count" name="guest-count" min="1" placeholder="Example: 150">
                         </div>
                     </div>
 
@@ -247,7 +248,7 @@
 
                     <div class="form-group">
                         <label for="message">Event Details</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell us what you need help with..."></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us what you need help with..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary form-button">Submit Request</button>
