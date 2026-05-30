@@ -185,113 +185,6 @@ body{
     color: #c9a86a
 }
 
-/*mobile responsiveness(tablet and phone adjustments)*/
-@media (max-width: 768px){
-    .navbar{
-        padding: 14px 18px;
-    }
-
-    .logo{
-        width: 72px;
-    }
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        background-position: center right;;
-    }
-
-    .hero-content{
-        padding: 130px 20px 70px;
-        margin-left: 0;
-    }
-
-    .hero-label{
-        font-size: 0.72rem;
-        letter-spacing: 0.18em;
-    }
-
-    .hero-description{
-        font-size: 1rem;
-    }
-
-    .hero-buttons{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .btn{
-        width: 100%;
-        max-width: 280px;
-        text-align: center;
-    }
-
-    .section-container{
-        padding: 76px 20px;
-    }
-
-    .services-heading {
-        align-items: flex-start;
-    }   
-
-    .services-heading::after {
-        display: none;
-    }
-
-    .services-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .service-card{
-        min-height: auto;
-        padding: 24px;
-    }
-
-        .experience-container {
-        padding: 22px 0;
-    }
-
-    .experience-label {
-        padding: 0 20px;
-        font-size: 0.68rem;
-        letter-spacing: 0.14em;
-    }
-
-    .experience-track {
-        gap: 32px;
-        animation-duration: 22s;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .team-card {
-        grid-template-columns: 1fr;
-    }
-
-    .team-image {
-        width: 100%;
-        height: 320px;
-    }
-    
-    .quote-container {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    }
-
-    .quote-form {
-        padding: 24px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-}
-
 /* reusable section spacing*/
 .section-container{
     max-width: 1200px;
@@ -732,4 +625,65 @@ body{
 .footer-bottom p {
     color: #8f8f8f;
     font-size: 0.85rem;
+}
+
+/*mobile responsiveness(tablet and phone adjustments)*/
+@media (max-width: 768px) {
+    .site-header {
+        position: relative;
+    }
+
+    .navbar {
+        padding: 14px 18px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0;
+        background-position: center right;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 14vw, 4.5rem);
+        line-height: 0.95;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
