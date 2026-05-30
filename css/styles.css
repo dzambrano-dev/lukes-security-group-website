@@ -109,7 +109,7 @@ body{
     z-index: 2;
     max-width: 760px;
     padding: 140px 24px 80px;
-    margin-left: max(24px, calc((100vw -1200px) /2));
+    margin-left: max(24px, calc((100vw - 1200px) / 2));
 }
 
 /* a small label above headline */
@@ -629,61 +629,266 @@ body{
 
 /*mobile responsiveness(tablet and phone adjustments)*/
 @media (max-width: 768px) {
+
+    /* keep header normal on mobile so it does not cover content */
     .site-header {
         position: relative;
     }
 
+    /* stack logo and nav nicely */
     .navbar {
-        padding: 14px 18px;
+        padding: 16px 18px;
         flex-direction: column;
-        gap: 12px;
+        align-items: center;
+        gap: 14px;
     }
 
+    /* make logo smaller so it does not dominate the phone screen */
     .logo {
-        width: 150px;
+        width: 165px;
     }
 
+    /* center nav links and allow wrapping */
     .nav-links {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
+        width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        margin-left: 0;
     }
 
+    /* smaller nav text for phone screens */
     .nav-links a {
-        font-size: 0.68rem;
-        letter-spacing: 0.1em;
+        font-size: 0.7rem;
+        letter-spacing: 0.09em;
     }
 
+    /* hero should not feel too tall or awkward on mobile */
     .hero {
-        min-height: auto;
-        padding: 80px 0;
-        background-position: center right;
+        min-height: 88vh;
+        padding: 70px 0;
+        background-position: center;
     }
 
+    /* stronger dark overlay for readability on small screens */
+    .hero-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.9) 0%,
+                rgba(0, 0, 0, 0.78) 55%,
+                rgba(0, 0, 0, 0.92) 100%
+            );
+    }
+
+    /* center hero content and reduce spacing */
     .hero-content {
         padding: 40px 20px;
         margin-left: 0;
         max-width: 100%;
+        text-align: center;
     }
 
+    /* make label readable without being too wide */
+    .hero-label {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 16px;
+    }
+
+    /* strong mobile hero title */
     .hero h1 {
-        font-size: clamp(3rem, 14vw, 4.5rem);
-        line-height: 0.95;
+        font-size: clamp(2.65rem, 12vw, 4rem);
+        line-height: 0.98;
+        margin-bottom: 22px;
     }
 
+    /* make body text easier to read */
     .hero-description {
         font-size: 1rem;
         max-width: 100%;
+        margin-bottom: 30px;
     }
 
+    /* stack buttons full-width */
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        gap: 12px;
     }
 
     .btn {
         width: 100%;
         text-align: center;
+        padding: 14px 18px;
+    }
+
+    /* reduce section spacing on phones */
+    .section-container {
+        padding: 72px 20px;
+    }
+
+    /* services heading stacks cleaner */
+    .services-heading {
+        display: block;
+        margin-bottom: 34px;
+    }
+
+    .services-heading h2 {
+        white-space: normal;
+        font-size: clamp(2.25rem, 10vw, 3.4rem);
+    }
+
+    .services-heading::after {
+        display: block;
+        margin-top: 18px;
+        width: 100%;
+    }
+
+    /* stack service cards into one column */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .service-card {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .service-card h3 {
+        font-size: 1.18rem;
+    }
+
+    .service-card p {
+        font-size: 0.96rem;
+    }
+
+    /* tighten experience strip */
+    .experience-container {
+        padding: 22px 0;
+    }
+
+    .experience-label {
+        padding: 0 20px;
+        font-size: 0.68rem;
+        letter-spacing: 0.14em;
+        line-height: 1.5;
+    }
+
+    .experience-track {
+        gap: 34px;
+        animation-duration: 24s;
+    }
+
+    .experience-track span {
+        font-size: 1.05rem;
+    }
+
+    /* about heading mobile size */
+    .about-heading {
+        margin-bottom: 36px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(2.2rem, 10vw, 3.4rem);
+    }
+
+    .about-heading p {
+        font-size: 1rem;
+    }
+
+    /* stack team cards */
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .team-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+        gap: 20px;
+    }
+
+    /* make team image fill nicely */
+    .team-image {
+        width: 100%;
+        height: 320px;
+    }
+
+    .team-info h3 {
+        font-size: 1.55rem;
+    }
+
+    .team-info p {
+        font-size: 0.95rem;
+    }
+
+    /* quote section becomes one column */
+    .quote-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .quote-content h2 {
+        font-size: clamp(2.2rem, 10vw, 3.4rem);
+    }
+
+    .quote-content p {
+        font-size: 1rem;
+    }
+
+    .quote-details {
+        margin-top: 26px;
+    }
+
+    /* reduce form padding */
+    .quote-form {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    /* stack form fields */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-group label {
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 14px;
+    }
+
+    /* footer stacks cleanly */
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 46px 20px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-brand p,
+    .footer-info p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        padding: 16px 20px;
     }
 }
