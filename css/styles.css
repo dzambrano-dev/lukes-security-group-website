@@ -608,10 +608,10 @@ img {
     }
 
     .site-header {
-    position: sticky;
-    top: 0;
-    background: rgba(5, 5, 5, 0.96);
-}
+        position: sticky;
+        top: 0;
+        background: rgba(5, 5, 5, 0.96);
+    }
 
     .navbar {
         padding: 10px 16px;
